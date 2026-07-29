@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html, body, #root {
+    background-color: #030712 !important;
+    color: #f8fafc !important;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+/* Container & Padding Utilities */
+.container-wide {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container-wide {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+/* Neon Glass Cards */
+.glass-cyber {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-cyber:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.25);
+}
+
+.text-gradient-neon {
+  background: linear-gradient(135deg, #00f0ff 0%, #d946ef 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
