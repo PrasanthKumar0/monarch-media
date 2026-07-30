@@ -2,7 +2,17 @@
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: dark !important;
+    forced-color-adjust: none !important;
+    -webkit-filter: none !important;
+    filter: none !important;
+  }
+
+  html {
+    color-scheme: dark !important;
+    forced-color-adjust: none !important;
+    color-rendering: optimizeQuality;
+    -webkit-font-smoothing: antialiased;
   }
 
   html, body, #root {
