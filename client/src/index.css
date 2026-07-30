@@ -2,17 +2,14 @@
 
 @layer base {
   :root {
-    color-scheme: dark !important;
+    /* "only light" prevents Edge/Chrome from running its auto-dark color inversion */
+    color-scheme: only light !important;
     forced-color-adjust: none !important;
-    -webkit-filter: none !important;
-    filter: none !important;
   }
 
   html {
-    color-scheme: dark !important;
+    color-scheme: only light !important;
     forced-color-adjust: none !important;
-    color-rendering: optimizeQuality;
-    -webkit-font-smoothing: antialiased;
   }
 
   html, body, #root {
