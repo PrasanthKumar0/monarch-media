@@ -121,13 +121,7 @@ const Contact = () => {
                 <span className="text-xs font-mono font-bold uppercase text-[#d80000]">// PRODUCTION BRIEF</span>
                 <h2 className="text-3xl font-black text-white font-display mt-1">Start Your Project</h2>
               </div>
-              <button 
-                type="button"
-                onClick={playClapSound}
-                className="px-3 py-1.5 rounded-lg bg-[#d80000]/10 border border-[#d80000]/30 text-[#d80000] font-mono text-[10px] uppercase font-bold hover:bg-[#d80000]/20 transition-colors"
-              >
-                🎬 Clap Sound
-              </button>
+              
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-5">
