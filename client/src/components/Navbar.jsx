@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleNavClick = (tabName, path) => {
     setActiveTab(tabName);
-    setMobileMenuOpen(false); // Close mobile menu when clicked
+    setMobileMenuOpen(false);
     if (path.startsWith('/#')) {
       const elementId = path.replace('/#', '');
       const element = document.getElementById(elementId);
@@ -28,9 +28,14 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 py-3 px-3 sm:px-8">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-2.5 rounded-full bg-[#0a0a0a]/90 border border-[#d80000]/30 shadow-[0_0_30px_rgba(216,0,0,0.15)] relative backdrop-blur-2xl">
+      {/* 
+        Cross-Browser Glass & Dark Color Fix:
+        - Uses bg-[#0a0a0a] with bg-opacity-95 for solid dark fallback.
+        - Includes explicit WebKit backdrop-filter properties so Edge renders dark tones identically to Chrome.
+      */}
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-2.5 rounded-full bg-[#0a0a0a] bg-opacity-95 border border-[#d80000]/40 shadow-[0_0_30px_rgba(216,0,0,0.2)] relative backdrop-blur-2xl backdrop-brightness-90 [-webkit-backdrop-filter:blur(40px)_brightness(0.9)]">
         
-        {/* Logo - Adjusted responsive scaling */}
+        {/* Logo */}
         <div className="flex items-center">
           <Link 
             to="/" 
@@ -112,7 +117,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden mt-2 mx-auto max-w-7xl rounded-2xl bg-[#0a0a0a]/95 border border-[#d80000]/30 backdrop-blur-2xl p-4 flex flex-col gap-4 text-center font-mono font-bold tracking-wider text-sm uppercase">
+        <div className="md:hidden mt-2 mx-auto max-w-7xl rounded-2xl bg-[#0a0a0a] bg-opacity-95 border border-[#d80000]/30 backdrop-blur-2xl [-webkit-backdrop-filter:blur(40px)] p-4 flex flex-col gap-4 text-center font-mono font-bold tracking-wider text-sm uppercase">
           <button 
             type="button"
             onClick={() => handleNavClick('home', '/')}
