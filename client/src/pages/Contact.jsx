@@ -53,10 +53,13 @@ const Contact = () => {
 
     // =========================================================
     // REPLACE THESE KEYS WITH YOUR ACTUAL EMAILJS KEYS:
+    // =========================================================
+    // YOUR LIVE EMAILJS KEYS:
     const SERVICE_ID = 'service_ps8x1vo';
-    const MAIN_TEMPLATE_ID = 'YOUR_MAIN_LEAD_TEMPLATE_ID'; // Notification to your inbox
-    const AUTOREPLY_TEMPLATE_ID = 'YOUR_AUTOREPLY_TEMPLATE_ID'; // Auto-reply confirmation to client
-    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Found in Account Settings
+    const MAIN_TEMPLATE_ID = 'template_ojzpi4n';
+    const AUTOREPLY_TEMPLATE_ID = 'template_ojzpi4n';
+    const PUBLIC_KEY = 'zZvlwy-R5OWmiyQen';
+    // =========================================================
     // =========================================================
 
     // 1. Send the lead notification to YOUR inbox
