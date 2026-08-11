@@ -67,7 +67,7 @@ const Contact = () => {
       PUBLIC_KEY
     );
 
-    // 2. Send the auto-reply confirmation email to the CLIENT
+    // 2. Send the auto-reply confirmation email to the  CLIENT
     const sendAutoReplyToClient = emailjs.sendForm(
       SERVICE_ID,
       AUTOREPLY_TEMPLATE_ID,
